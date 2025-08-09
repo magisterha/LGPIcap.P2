@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Texto Latino - Pastores</title>
+    
+    <style type="text/css">
+        /* --- Tailwind CSS Pre-compilado (Preflight & Utilitarios Usados) --- */
+        *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::before,::after{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type='button'],[type='reset'],[type='submit']{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type='search']{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button, [role="button"]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}
+        .mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-10{margin-bottom:2.5rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-6{margin-top:1.5rem}.my-6{margin-top:1.5rem;margin-bottom:1.5rem}
+        .block{display:block}.h-screen{height:100vh}.w-80{width:20rem}
+        .overflow-y-auto{overflow-y:auto}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}
+        .border-b-2{border-bottom-width:2px}.border-stone-300{--tw-border-opacity:1;border-color:rgb(214 211 209 / var(--tw-border-opacity))}
+        .bg-stone-100{--tw-bg-opacity:1;background-color:rgb(245 245 244 / var(--tw-bg-opacity))}
+        .bg-stone-200{--tw-bg-opacity:1;background-color:rgb(231 229 228 / var(--tw-bg-opacity))}
+        .bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}
+        .p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.pb-5{padding-bottom:1.25rem}
+        .text-center{text-align:center}.text-justify{text-align:justify}
+        .text-2xl{font-size:1.5rem;line-height:2rem}.text-5xl{font-size:3rem;line-height:1}
+        .text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}
+        .font-bold{font-weight:700}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-wider{letter-spacing:0.05em}
+        .text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}
+        .text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}
+        .text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}
+        .text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity))}
+        .shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
+        .shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
+        .transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;-webkit-backdrop-filter:backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}
+        .space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}
+        .space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}
+        @media (min-width:1024px){.lg\:p-12{padding:3rem}}
+
+        /* --- Estilos Personalizados --- */
+        body{background-color:#f3f0e9;font-family:'Helvetica Neue',Arial,sans-serif;color:#4a4a4a}
+        .textum-classicum{font-family:'Georgia','Times New Roman',serif}
+        .verbum{cursor:pointer;transition:background-color .2s ease-in-out, box-shadow .2s ease-in-out; border-radius: 0.25rem; padding: 0 0.1rem;}
+        .verbum:hover{background-color:#ede6d6}
+        .activus{background-color:#cbbca7!important;font-weight:700}
+        
+        /* --- LAYOUT RESPONSIVO (Móvil Primero) --- */
+        .main-layout { 
+            padding: 1rem;
+            padding-bottom: calc(45vh + 2rem);
+        }
+
+        #marginalia-sinistra { 
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 45vh;
+            z-index: 50;
+            border-top: 2px solid #d6d3d1;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        @media (min-width: 1024px) {
+            .main-layout { 
+                display: grid; 
+                grid-template-columns: 22rem 1fr;
+                gap: 2rem;
+                padding: 2rem;
+            }
+
+            #marginalia-sinistra { 
+                position: sticky;
+                top: 2rem; 
+                bottom: auto;
+                left: auto;
+                right: auto;
+                height: calc(100vh - 4rem);
+                width: auto;
+                border-top: none;
+                box-shadow: var(--tw-shadow-xl);
+            }
+        }
+    </style>
+</head>
+<body class="bg-stone-100">
+
+    <div class="main-layout">
+        <main>
+            <header class="text-center mb-10 border-b-2 border-stone-300 pb-5">
+                <h1 class="text-5xl textum-classicum text-gray-800">Pāstōrēs in Italiā</h1>
+                <h2 class="text-2xl text-gray-600 mt-2">Análisis de Texto</h2>
+            </header>
+            
+            <div id="paragrafus-contentus" class="textum-classicum text-xl leading-relaxed text-justify bg-white p-8 lg:p-12 rounded-lg shadow-lg"></div>
+            
+            <footer class="text-center mt-6 text-sm text-gray-500">
+                <p><i>Haz clic en una palabra para ver su análisis y la traducción de la frase.</i></p>
+            </footer>
+        </main>
+
+        <aside id="marginalia-sinistra" class="bg-white p-6 rounded-t-lg lg:rounded-lg overflow-y-auto">
+            <div id="marginalia-contentus"></div>
+        </aside>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // =========================================================================================
+        // === INICIO DE LA ZONA DE DATOS ===
+        // =========================================================================================
+        const paragrafus = {
+            id: 1,
+            orationes: [
+                {
+                    id_orationis: 'o1',
+                    textus_latinus: "In Italiā sunt multī pāstōrēs.",
+                    translationes: { es: '<strong>Español</strong>: En Italia hay muchos pastores.' },
+                    verba: [
+                        { id_verbi: 'v1_1', terminus: 'In', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo (lugar en donde).', significationes: { es: 'en' } },
+                        { id_verbi: 'v1_2', terminus: 'Italiā', analysis_morphologicus: 'Lema: Italia, -ae<br>Análisis: Sustantivo, 1ª declinación. Ablativo, singular, femenino.', significationes: { es: 'en Italia' } },
+                        { id_verbi: 'v1_3', terminus: 'sunt', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, plural, presente, indicativo, activo.', significationes: { es: 'son/están/hay' } },
+                        { id_verbi: 'v1_4', terminus: 'multī', analysis_morphologicus: 'Lema: multus, -a, -um<br>Análisis: Adjetivo, 1ª/2ª declinación. Nominativo, plural, masculino.', significationes: { es: 'muchos' } },
+                        { id_verbi: 'v1_5', terminus: 'pāstōrēs', analysis_morphologicus: 'Lema: pāstor, pāstōris<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, masculino.', significationes: { es: 'pastores' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o2',
+                    textus_latinus: "Quī viā Appiā Rōmā Brundisium it multōs pāstōrēs videt in campīs.",
+                    translationes: { es: '<strong>Español</strong>: Quien va de Roma a Brindisi por la Vía Apia, ve a muchos pastores en los campos.' },
+                    verba: [
+                        { id_verbi: 'v2_1', terminus: 'Quī', analysis_morphologicus: 'Lema: quī, quae, quod<br>Análisis: Pronombre relativo. Nominativo, singular, masculino.', significationes: { es: 'Quien, el que' } },
+                        { id_verbi: 'v2_2', terminus: 'viā Appiā', analysis_morphologicus: 'Lema: via Appia<br>Análisis: Sustantivo + Adjetivo. Ablativo, singular, femenino.', significationes: { es: 'por la Vía Apia' } },
+                        { id_verbi: 'v2_3', terminus: 'Rōmā', analysis_morphologicus: 'Lema: Rōma, -ae<br>Análisis: Sustantivo, 1ª declinación. Ablativo de procedencia.', significationes: { es: 'desde Roma' } },
+                        { id_verbi: 'v2_4', terminus: 'Brundisium', analysis_morphologicus: 'Lema: Brundisium, -ī<br>Análisis: Sustantivo, 2ª declinación. Acusativo de dirección.', significationes: { es: 'a Brindisi' } },
+                        { id_verbi: 'v2_5', terminus: 'it', analysis_morphologicus: 'Lema: eō, īre, iī/īvī, itum<br>Análisis: Verbo irregular. 3ª persona, singular, presente, indicativo, activo.', significationes: { es: 'va' } },
+                        { id_verbi: 'v2_6', terminus: 'multōs', analysis_morphologicus: 'Lema: multus, -a, -um<br>Análisis: Adjetivo, 1ª/2ª declinación. Acusativo, plural, masculino.', significationes: { es: 'a muchos' } },
+                        { id_verbi: 'v2_7', terminus: 'pāstōrēs', analysis_morphologicus: 'Lema: pāstor, pāstōris<br>Análisis: Sustantivo, 3ª declinación. Acusativo, plural, masculino.', significationes: { es: 'pastores' } },
+                        { id_verbi: 'v2_8', terminus: 'videt', analysis_morphologicus: 'Lema: videō, vidēre, vīdī, vīsum<br>Análisis:Verbo, 2ª conjugación. 3ª persona, singular, presente, indicativo, activo.', significationes: { es: 've' } },
+                        { id_verbi: 'v2_9', terminus: 'in', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo.', significationes: { es: 'en' } },
+                        { id_verbi: 'v2_10', terminus: 'campīs', analysis_morphologicus: 'Lema: campus, -ī<br>Análisis: Sustantivo, 2ª declinación. Ablativo, plural, masculino.', significationes: { es: 'en los campos' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o3',
+                    textus_latinus: "Numerus pāstōrum magnus est.",
+                    translationes: { es: '<strong>Español</strong>: El número de pastores es grande.' },
+                    verba: [
+                        { id_verbi: 'v3_1', terminus: 'Numerus', analysis_morphologicus: 'Lema: numerus, -ī<br>Análisis: Sustantivo, 2ª declinación. Nominativo, singular, masculino.', significationes: { es: 'El número' } },
+                        { id_verbi: 'v3_2', terminus: 'pāstōrum', analysis_morphologicus: 'Lema: pāstor, pāstōris<br>Análisis: Sustantivo, 3ª declinación. Genitivo, plural, masculino.', significationes: { es: 'de los pastores' } },
+                        { id_verbi: 'v3_3', terminus: 'magnus', analysis_morphologicus: 'Lema: magnus, -a, -um<br>Análisis: Adjetivo, 1ª/2ª declinación. Nominativo, singular, masculino.', significationes: { es: 'grande' } },
+                        { id_verbi: 'v3_4', terminus: 'est', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, singular, presente, indicativo, activo.', significationes: { es: 'es' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o4',
+                    textus_latinus: "Dominī pāstōribus suīs cibum dant.",
+                    translationes: { es: '<strong>Español</strong>: Los amos dan comida a sus pastores.' },
+                    verba: [
+                        { id_verbi: 'v4_1', terminus: 'Dominī', analysis_morphologicus: 'Lema: dominus, -ī<br>Análisis: Sustantivo, 2ª declinación. Nominativo, plural, masculino.', significationes: { es: 'Los amos' } },
+                        { id_verbi: 'v4_2', terminus: 'pāstōribus', analysis_morphologicus: 'Lema: pāstor, pāstōris<br>Análisis: Sustantivo, 3ª declinación. Dativo, plural, masculino.', significationes: { es: 'a los pastores' } },
+                        { id_verbi: 'v4_3', terminus: 'suīs', analysis_morphologicus: 'Lema: suus, -a, -um<br>Análisis: Adjetivo posesivo. Dativo, plural, masculino.', significationes: { es: 'a sus' } },
+                        { id_verbi: 'v4_4', terminus: 'cibum', analysis_morphologicus: 'Lema: cibus, -ī<br>Análisis: Sustantivo, 2ª declinación. Acusativo, singular, masculino.', significationes: { es: 'comida' } },
+                        { id_verbi: 'v4_5', terminus: 'dant', analysis_morphologicus: 'Lema: dō, dare, dedī, datum<br>Análisis: Verbo, 1ª conjugación. 3ª persona, plural, presente, indicativo, activo.', significationes: { es: 'dan' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o5',
+                    textus_latinus: "Canēs ā pāstōribus cibum accipiunt.",
+                    translationes: { es: '<strong>Español</strong>: Los perros reciben comida de los pastores.' },
+                    verba: [
+                        { id_verbi: 'v5_1', terminus: 'Canēs', analysis_morphologicus: 'Lema: canis, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, masculino/femenino.', significationes: { es: 'Los perros' } },
+                        { id_verbi: 'v5_2', terminus: 'ā', analysis_morphologicus: 'Lema: ab/ā<br>Análisis: Preposición de ablativo.', significationes: { es: 'de, desde, por' } },
+                        { id_verbi: 'v5_3', terminus: 'pāstōribus', analysis_morphologicus: 'Lema: pāstor, pāstōris<br>Análisis: Sustantivo, 3ª declinación. Ablativo, plural, masculino.', significationes: { es: 'de los pastores' } },
+                        { id_verbi: 'v5_4', terminus: 'cibum', analysis_morphologicus: 'Lema: cibus, -ī<br>Análisis: Sustantivo, 2ª declinación. Acusativo, singular, masculino.', significationes: { es: 'comida' } },
+                        { id_verbi: 'v5_5', terminus: 'accipiunt', analysis_morphologicus: 'Lema: accipiō, accipere, accēpī, acceptum<br>Análisis: Verbo, 3ª conjugación -iō. 3ª persona, plural, presente, indicativo, activo.', significationes: { es: 'reciben' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o6',
+                    textus_latinus: "Post campum montēs sunt.",
+                    translationes: { es: '<strong>Español</strong>: Detrás del campo hay montañas.' },
+                    verba: [
+                        { id_verbi: 'v6_1', terminus: 'Post', analysis_morphologicus: 'Lema: post<br>Análisis: Preposición que rige acusativo.', significationes: { es: 'detrás de' } },
+                        { id_verbi: 'v6_2', terminus: 'campum', analysis_morphologicus: 'Lema: campus, -ī<br>Análisis: Sustantivo, 2ª declinación. Acusativo, singular, masculino.', significationes: { es: 'el campo' } },
+                        { id_verbi: 'v6_3', terminus: 'montēs', analysis_morphologicus: 'Lema: mōns, montis<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, masculino.', significationes: { es: 'montañas' } },
+                        { id_verbi: 'v6_4', terminus: 'sunt', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, plural, presente, indicativo, activo.', significationes: { es: 'son/están/hay' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o7',
+                    textus_latinus: "Inter montēs sunt vallēs.",
+                    translationes: { es: '<strong>Español</strong>: Entre las montañas hay valles.' },
+                    verba: [
+                        { id_verbi: 'v7_1', terminus: 'Inter', analysis_morphologicus: 'Lema: inter<br>Análisis: Preposición que rige acusativo.', significationes: { es: 'entre' } },
+                        { id_verbi: 'v7_2', terminus: 'montēs', analysis_morphologicus: 'Lema: mōns, montis<br>Análisis: Sustantivo, 3ª declinación. Acusativo, plural, masculino.', significationes: { es: 'las montañas' } },
+                        { id_verbi: 'v7_3', terminus: 'sunt', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, plural, presente, indicativo, activo.', significationes: { es: 'son/están/hay' } },
+                        { id_verbi: 'v7_4', terminus: 'vallēs', analysis_morphologicus: 'Lema: vallēs, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, femenino.', significationes: { es: 'valles' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o8',
+                    textus_latinus: "In campō est collis.",
+                    translationes: { es: '<strong>Español</strong>: En el campo hay una colina.' },
+                    verba: [
+                        { id_verbi: 'v8_1', terminus: 'In', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo.', significationes: { es: 'en' } },
+                        { id_verbi: 'v8_2', terminus: 'campō', analysis_morphologicus: 'Lema: campus, -ī<br>Análisis: Sustantivo, 2ª declinación. Ablativo, singular, masculino.', significationes: { es: 'en el campo' } },
+                        { id_verbi: 'v8_3', terminus: 'est', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, singular, presente, indicativo, activo.', significationes: { es: 'es/está/hay' } },
+                        { id_verbi: 'v8_4', terminus: 'collis', analysis_morphologicus: 'Lema: collis, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo, singular, masculino.', significationes: { es: 'una colina' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o9',
+                    textus_latinus: "(Collis est mōns parvus.)",
+                    translationes: { es: '<strong>Español</strong>: (Una colina es una montaña pequeña.)' },
+                    verba: [
+                        { id_verbi: 'v9_1', terminus: 'Collis', analysis_morphologicus: 'Lema: collis, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo, singular, masculino.', significationes: { es: 'Una colina' } },
+                        { id_verbi: 'v9_2', terminus: 'est', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, singular, presente, indicativo, activo.', significationes: { es: 'es' } },
+                        { id_verbi: 'v9_3', terminus: 'mōns', analysis_morphologicus: 'Lema: mōns, montis<br>Análisis: Sustantivo, 3ª declinación. Nominativo, singular, masculino.', significationes: { es: 'una montaña' } },
+                        { id_verbi: 'v9_4', terminus: 'parvus', analysis_morphologicus: 'Lema: parvus, -a, -um<br>Análisis: Adjetivo. Nominativo, singular, masculino.', significationes: { es: 'pequeño' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o10',
+                    textus_latinus: "In colle arbor est.",
+                    translationes: { es: '<strong>Español</strong>: En la colina hay un árbol.' },
+                    verba: [
+                        { id_verbi: 'v10_1', terminus: 'In', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo.', significationes: { es: 'en' } },
+                        { id_verbi: 'v10_2', terminus: 'colle', analysis_morphologicus: 'Lema: collis, -is<br>Análisis: Sustantivo, 3ª declinación. Ablativo, singular, masculino.', significationes: { es: 'en la colina' } },
+                        { id_verbi: 'v10_3', terminus: 'arbor', analysis_morphologicus: 'Lema: arbor, -oris<br>Análisis: Sustantivo, 3ª declinación. Nominativo, singular, femenino.', significationes: { es: 'un árbol' } },
+                        { id_verbi: 'v10_4', terminus: 'est', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, singular, presente, indicativo, activo.', significationes: { es: 'es/está/hay' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o11',
+                    textus_latinus: "In silvā multae arborēs sunt.",
+                    translationes: { es: '<strong>Español</strong>: En el bosque hay muchos árboles.' },
+                    verba: [
+                        { id_verbi: 'v11_1', terminus: 'In', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo.', significationes: { es: 'en' } },
+                        { id_verbi: 'v11_2', terminus: 'silvā', analysis_morphologicus: 'Lema: silva, -ae<br>Análisis: Sustantivo, 1ª declinación. Ablativo, singular, femenino.', significationes: { es: 'en el bosque' } },
+                        { id_verbi: 'v11_3', terminus: 'multae', analysis_morphologicus: 'Lema: multus, -a, -um<br>Análisis: Adjetivo. Nominativo, plural, femenino.', significationes: { es: 'muchas' } },
+                        { id_verbi: 'v11_4', terminus: 'arborēs', analysis_morphologicus: 'Lema: arbor, -oris<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, femenino.', significationes: { es: 'árboles' } },
+                        { id_verbi: 'v11_5', terminus: 'sunt', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, plural, presente, indicativo, activo.', significationes: { es: 'son/están/hay' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o12',
+                    textus_latinus: "Ovēs nōn in silvā neque in monte, sed in campō sunt.",
+                    translationes: { es: '<strong>Español</strong>: Las ovejas no están en el bosque ni en la montaña, sino que están en el campo.' },
+                    verba: [
+                        { id_verbi: 'v12_1', terminus: 'Ovēs', analysis_morphologicus: 'Lema: ovis, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, femenino.', significationes: { es: 'Las ovejas' } },
+                        { id_verbi: 'v12_2', terminus: 'nōn', analysis_morphologicus: 'Lema: nōn<br>Análisis: Adverbio de negación.', significationes: { es: 'no' } },
+                        { id_verbi: 'v12_3', terminus: 'in', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo.', significationes: { es: 'en' } },
+                        { id_verbi: 'v12_4', terminus: 'silvā', analysis_morphologicus: 'Lema: silva, -ae<br>Análisis: Sustantivo, 1ª declinación. Ablativo, singular, femenino.', significationes: { es: 'en el bosque' } },
+                        { id_verbi: 'v12_5', terminus: 'neque', analysis_morphologicus: 'Lema: neque<br>Análisis: Conjunción coordinante negativa.', significationes: { es: 'ni' } },
+                        { id_verbi: 'v12_6', terminus: 'monte', analysis_morphologicus: 'Lema: mōns, montis<br>Análisis: Sustantivo, 3ª declinación. Ablativo, singular, masculino.', significationes: { es: 'en la montaña' } },
+                        { id_verbi: 'v12_7', terminus: 'sed', analysis_morphologicus: 'Lema: sed<br>Análisis: Conjunción coordinante adversativa.', significationes: { es: 'sino, pero' } },
+                        { id_verbi: 'v12_8', terminus: 'campō', analysis_morphologicus: 'Lema: campus, -ī<br>Análisis: Sustantivo, 2ª declinación. Ablativo, singular, masculino.', significationes: { es: 'en el campo' } },
+                        { id_verbi: 'v12_9', terminus: 'sunt', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, plural, presente, indicativo, activo.', significationes: { es: 'están' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o13',
+                    textus_latinus: "In silvā est lupus.",
+                    translationes: { es: '<strong>Español</strong>: En el bosque hay un lobo.' },
+                    verba: [
+                        { id_verbi: 'v13_1', terminus: 'In', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo.', significationes: { es: 'en' } },
+                        { id_verbi: 'v13_2', terminus: 'silvā', analysis_morphologicus: 'Lema: silva, -ae<br>Análisis: Sustantivo, 1ª declinación. Ablativo, singular, femenino.', significationes: { es: 'en el bosque' } },
+                        { id_verbi: 'v13_3', terminus: 'est', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, singular, presente, indicativo, activo.', significationes: { es: 'es/está/hay' } },
+                        { id_verbi: 'v13_4', terminus: 'lupus', analysis_morphologicus: 'Lema: lupus, -ī<br>Análisis: Sustantivo, 2ª declinación. Nominativo, singular, masculino.', significationes: { es: 'un lobo' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o14',
+                    textus_latinus: "Pāstor et ovēs lupum timent, nam lupus ovēs ēst.",
+                    translationes: { es: '<strong>Español</strong>: El pastor y las ovejas temen al lobo, pues el lobo come ovejas.' },
+                    verba: [
+                        { id_verbi: 'v14_1', terminus: 'Pāstor', analysis_morphologicus: 'Lema: pāstor, pāstōris<br>Análisis: Sustantivo, 3ª declinación. Nominativo, singular, masculino.', significationes: { es: 'El pastor' } },
+                        { id_verbi: 'v14_2', terminus: 'et', analysis_morphologicus: 'Lema: et<br>Análisis: Conjunción coordinante copulativa.', significationes: { es: 'y' } },
+                        { id_verbi: 'v14_3', terminus: 'ovēs', analysis_morphologicus: 'Lema: ovis, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo/Acusativo, plural, femenino.', significationes: { es: 'las ovejas' } },
+                        { id_verbi: 'v14_4', terminus: 'lupum', analysis_morphologicus: 'Lema: lupus, -ī<br>Análisis: Sustantivo, 2ª declinación. Acusativo, singular, masculino.', significationes: { es: 'al lobo' } },
+                        { id_verbi: 'v14_5', terminus: 'timent', analysis_morphologicus: 'Lema: timeō, timēre, timuī<br>Análisis: Verbo, 2ª conjugación. 3ª persona, plural, presente, indicativo, activo.', significationes: { es: 'temen' } },
+                        { id_verbi: 'v14_6', terminus: 'nam', analysis_morphologicus: 'Lema: nam<br>Análisis: Conjunción causal.', significationes: { es: 'pues, porque' } },
+                        { id_verbi: 'v14_7', terminus: 'lupus', analysis_morphologicus: 'Lema: lupus, -ī<br>Análisis: Sustantivo, 2ª declinación. Nominativo, singular, masculino.', significationes: { es: 'el lobo' } },
+                        { id_verbi: 'v14_8', terminus: 'ēst', analysis_morphologicus: 'Lema: edō, edere/esse, ēdī, ēsum<br>Análisis:Verbo irregular. 3ª persona, singular, presente, indicativo, activo.', significationes: { es: 'come' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o15',
+                    textus_latinus: "In silvīs et in montibus lupī sunt, in vallibus nūllī sunt lupī.",
+                    translationes: { es: '<strong>Español</strong>: En los bosques y en las montañas hay lobos, en los valles no hay ningún lobo.' },
+                    verba: [
+                        { id_verbi: 'v15_1', terminus: 'In', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo.', significationes: { es: 'en' } },
+                        { id_verbi: 'v15_2', terminus: 'silvīs', analysis_morphologicus: 'Lema: silva, -ae<br>Análisis: Sustantivo, 1ª declinación. Ablativo, plural, femenino.', significationes: { es: 'en los bosques' } },
+                        { id_verbi: 'v15_3', terminus: 'et', analysis_morphologicus: 'Lema: et<br>Análisis: Conjunción coordinante copulativa.', significationes: { es: 'y' } },
+                        { id_verbi: 'v15_4', terminus: 'montibus', analysis_morphologicus: 'Lema: mōns, montis<br>Análisis: Sustantivo, 3ª declinación. Ablativo, plural, masculino.', significationes: { es: 'en las montañas' } },
+                        { id_verbi: 'v15_5', terminus: 'lupī', analysis_morphologicus: 'Lema: lupus, -ī<br>Análisis: Sustantivo, 2ª declinación. Nominativo, plural, masculino.', significationes: { es: 'lobos' } },
+                        { id_verbi: 'v15_6', terminus: 'sunt', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, plural, presente, indicativo, activo.', significationes: { es: 'son/están/hay' } },
+                        { id_verbi: 'v15_7', terminus: 'vallibus', analysis_morphologicus: 'Lema: vallēs, -is<br>Análisis: Sustantivo, 3ª declinación. Ablativo, plural, femenino.', significationes: { es: 'en los valles' } },
+                        { id_verbi: 'v15_8', terminus: 'nūllī', analysis_morphologicus: 'Lema: nūllus, -a, -um<br>Análisis: Adjetivo pronominal. Nominativo, plural, masculino.', significationes: { es: 'ningún' } }
+                    ]
+                },
+                 {
+                    id_orationis: 'o16',
+                    textus_latinus: "Sōl in caelō est suprā campum.",
+                    translationes: { es: '<strong>Español</strong>: El sol está en el cielo sobre el campo.' },
+                    verba: [
+                        { id_verbi: 'v16_1', terminus: 'Sōl', analysis_morphologicus: 'Lema: sōl, sōlis<br>Análisis: Sustantivo, 3ª declinación. Nominativo, singular, masculino.', significationes: { es: 'El sol' } },
+                        { id_verbi: 'v16_2', terminus: 'in', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo.', significationes: { es: 'en' } },
+                        { id_verbi: 'v16_3', terminus: 'caelō', analysis_morphologicus: 'Lema: caelum, -ī<br>Análisis: Sustantivo, 2ª declinación. Ablativo, singular, neutro.', significationes: { es: 'en el cielo' } },
+                        { id_verbi: 'v16_4', terminus: 'est', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, singular, presente, indicativo, activo.', significationes: { es: 'es/está/hay' } },
+                        { id_verbi: 'v16_5', terminus: 'suprā', analysis_morphologicus: 'Lema: suprā<br>Análisis: Preposición que rige acusativo.', significationes: { es: 'sobre, por encima de' } },
+                        { id_verbi: 'v16_6', terminus: 'campum', analysis_morphologicus: 'Lema: campus, -ī<br>Análisis: Sustantivo, 2ª declinación. Acusativo, singular, masculino.', significationes: { es: 'el campo' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o17',
+                    textus_latinus: "In caelō nūlla nūbēs vidētur.",
+                    translationes: { es: '<strong>Español</strong>: En el cielo no se ve ninguna nube.' },
+                    verba: [
+                        { id_verbi: 'v17_1', terminus: 'In', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo.', significationes: { es: 'en' } },
+                        { id_verbi: 'v17_2', terminus: 'caelō', analysis_morphologicus: 'Lema: caelum, -ī<br>Análisis: Sustantivo, 2ª declinación. Ablativo, singular, neutro.', significationes: { es: 'en el cielo' } },
+                        { id_verbi: 'v17_3', terminus: 'nūlla', analysis_morphologicus: 'Lema: nūllus, -a, -um<br>Análisis: Adjetivo pronominal. Nominativo, singular, femenino.', significationes: { es: 'ninguna' } },
+                        { id_verbi: 'v17_4', terminus: 'nūbēs', analysis_morphologicus: 'Lema: nūbēs, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo, singular, femenino.', significationes: { es: 'nube' } },
+                        { id_verbi: 'v17_5', terminus: 'vidētur', analysis_morphologicus: 'Lema: videō, vidēre, vīdī, vīsum<br>Análisis:Verbo, 2ª conjugación. 3ª persona, singular, presente, indicativo, pasivo.', significationes: { es: 'es vista, se ve' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o18',
+                    textus_latinus: "Caelum est suprā terram.",
+                    translationes: { es: '<strong>Español</strong>: El cielo está sobre la tierra.' },
+                    verba: [
+                        { id_verbi: 'v18_1', terminus: 'Caelum', analysis_morphologicus: 'Lema: caelum, -ī<br>Análisis: Sustantivo, 2ª declinación. Nominativo, singular, neutro.', significationes: { es: 'El cielo' } },
+                        { id_verbi: 'v18_2', terminus: 'est', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, singular, presente, indicativo, activo.', significationes: { es: 'es/está/hay' } },
+                        { id_verbi: 'v18_3', terminus: 'suprā', analysis_morphologicus: 'Lema: suprā<br>Análisis: Preposición que rige acusativo.', significationes: { es: 'sobre' } },
+                        { id_verbi: 'v18_4', terminus: 'terram', analysis_morphologicus: 'Lema: terra, -ae<br>Análisis: Sustantivo, 1ª declinación. Acusativo, singular, femenino.', significationes: { es: 'la tierra' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o19',
+                    textus_latinus: "Montēs et vallēs, campī silvaeque sunt in terrā.",
+                    translationes: { es: '<strong>Español</strong>: Las montañas y los valles, los campos y los bosques están en la tierra.' },
+                    verba: [
+                        { id_verbi: 'v19_1', terminus: 'Montēs', analysis_morphologicus: 'Lema: mōns, montis<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, masculino.', significationes: { es: 'Las montañas' } },
+                        { id_verbi: 'v19_2', terminus: 'et', analysis_morphologicus: 'Lema: et<br>Análisis: Conjunción coordinante copulativa.', significationes: { es: 'y' } },
+                        { id_verbi: 'v19_3', terminus: 'vallēs', analysis_morphologicus: 'Lema: vallēs, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, femenino.', significationes: { es: 'los valles' } },
+                        { id_verbi: 'v19_4', terminus: 'campī', analysis_morphologicus: 'Lema: campus, -ī<br>Análisis: Sustantivo, 2ª declinación. Nominativo, plural, masculino.', significationes: { es: 'los campos' } },
+                        { id_verbi: 'v19_5', terminus: 'silvaeque', analysis_morphologicus: 'Lema: silva, -ae + -que<br>Análisis: Sustantivo, 1ª declinación. Nominativo, plural, femenino, con conjunción enclítica -que.', significationes: { es: 'y los bosques' } },
+                        { id_verbi: 'v19_6', terminus: 'sunt', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, plural, presente, indicativo, activo.', significationes: { es: 'están' } },
+                        { id_verbi: 'v19_7', terminus: 'in', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo.', significationes: { es: 'en' } },
+                        { id_verbi: 'v19_8', terminus: 'terrā', analysis_morphologicus: 'Lema: terra, -ae<br>Análisis: Sustantivo, 1ª declinación. Ablativo, singular, femenino.', significationes: { es: 'en la tierra' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o20',
+                    textus_latinus: "In caelō sōl et nūbēs sunt, sed suprā hunc campum caelum sine nūbibus est.",
+                    translationes: { es: '<strong>Español</strong>: En el cielo están el sol y las nubes, pero sobre este campo el cielo está sin nubes.' },
+                    verba: [
+                        { id_verbi: 'v20_1', terminus: 'In', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo.', significationes: { es: 'en' } },
+                        { id_verbi: 'v20_2', terminus: 'caelō', analysis_morphologicus: 'Lema: caelum, -ī<br>Análisis: Sustantivo, 2ª declinación. Ablativo, singular, neutro.', significationes: { es: 'en el cielo' } },
+                        { id_verbi: 'v20_3', terminus: 'sōl', analysis_morphologicus: 'Lema: sōl, sōlis<br>Análisis: Sustantivo, 3ª declinación. Nominativo, singular, masculino.', significationes: { es: 'el sol' } },
+                        { id_verbi: 'v20_4', terminus: 'et', analysis_morphologicus: 'Lema: et<br>Análisis: Conjunción coordinante copulativa.', significationes: { es: 'y' } },
+                        { id_verbi: 'v20_5', terminus: 'nūbēs', analysis_morphologicus: 'Lema: nūbēs, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, femenino.', significationes: { es: 'nubes' } },
+                        { id_verbi: 'v20_6', terminus: 'sunt', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, plural, presente, indicativo, activo.', significationes: { es: 'están' } },
+                        { id_verbi: 'v20_7', terminus: 'sed', analysis_morphologicus: 'Lema: sed<br>Análisis: Conjunción coordinante adversativa.', significationes: { es: 'pero' } },
+                        { id_verbi: 'v20_8', terminus: 'suprā', analysis_morphologicus: 'Lema: suprā<br>Análisis: Preposición que rige acusativo.', significationes: { es: 'sobre' } },
+                        { id_verbi: 'v20_9', terminus: 'hunc', analysis_morphologicus: 'Lema: hic, haec, hoc<br>Análisis:Pronombre/Adjetivo demostrativo. Acusativo, singular, masculino.', significationes: { es: 'este' } },
+                        { id_verbi: 'v20_10', terminus: 'campum', analysis_morphologicus: 'Lema: campus, -ī<br>Análisis: Sustantivo, 2ª declinación. Acusativo, singular, masculino.', significationes: { es: 'campo' } },
+                        { id_verbi: 'v20_11', terminus: 'caelum', analysis_morphologicus: 'Lema: caelum, -ī<br>Análisis: Sustantivo, 2ª declinación. Nominativo, singular, neutro.', significationes: { es: 'el cielo' } },
+                        { id_verbi: 'v20_12', terminus: 'sine', analysis_morphologicus: 'Lema: sine<br>Análisis: Preposición que rige ablativo.', significationes: { es: 'sin' } },
+                        { id_verbi: 'v20_13', terminus: 'nūbibus', analysis_morphologicus: 'Lema: nūbēs, -is<br>Análisis: Sustantivo, 3ª declinación. Ablativo, plural, femenino.', significationes: { es: 'nubes' } },
+                        { id_verbi: 'v20_14', terminus: 'est', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, singular, presente, indicativo, activo.', significationes: { es: 'está' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o21',
+                    textus_latinus: "Itaque sōl lūcet in campō.",
+                    translationes: { es: '<strong>Español</strong>: Por lo tanto, el sol brilla en el campo.' },
+                    verba: [
+                        { id_verbi: 'v21_1', terminus: 'Itaque', analysis_morphologicus: 'Lema: itaque<br>Análisis: Adverbio conjuntivo.', significationes: { es: 'por lo tanto' } },
+                        { id_verbi: 'v21_2', terminus: 'sōl', analysis_morphologicus: 'Lema: sōl, sōlis<br>Análisis: Sustantivo, 3ª declinación. Nominativo, singular, masculino.', significationes: { es: 'el sol' } },
+                        { id_verbi: 'v21_3', terminus: 'lūcet', analysis_morphologicus: 'Lema: lūceō, lūcēre, lūxī<br>Análisis: Verbo, 2ª conjugación. 3ª persona, singular, presente, indicativo, activo.', significationes: { es: 'brilla' } },
+                        { id_verbi: 'v21_4', terminus: 'in', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo.', significationes: { es: 'en' } },
+                        { id_verbi: 'v21_5', terminus: 'campō', analysis_morphologicus: 'Lema: campus, -ī<br>Análisis: Sustantivo, 2ª declinación. Ablativo, singular, masculino.', significationes: { es: 'en el campo' } }
+                    ]
+                }
+            ]
+        };
+        // =========================================================================================
+        // === FIN DE LA ZONA DE DATOS ===
+        // =========================================================================================
+
+        const paragrafusContentus = document.getElementById('paragrafus-contentus');
+        const marginaliaContentus = document.getElementById('marginalia-contentus');
+
+        let activumVerbum = null;
+        let activaOratio = null;
+
+        function reddeParagrafum() {
+            let fullText = paragrafus.orationes.map(o => o.textus_latinus).join(' ');
+            let allVerba = paragrafus.orationes.flatMap(o => o.verba.map(v => ({...v, oratioId: o.id_orationis})));
+
+            // Ordenar por longitud para evitar reemplazos parciales (ej. "est" antes que "pāstōrēs")
+            allVerba.sort((a,b) => b.terminus.length - a.terminus.length);
+
+            allVerba.forEach(verbum => {
+                // Usar una expresión regular que no se solape con etiquetas HTML ya existentes
+                const regex = new RegExp(`\\b(${verbum.terminus.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')})(?![^<]*?>)`, 'g');
+                const replacement = `<span class="verbum" data-verbum-id="${verbum.id_verbi}" data-oratio-id="${verbum.oratioId}">$1</span>`;
+                fullText = fullText.replace(regex, replacement);
+            });
+
+            paragrafusContentus.innerHTML = fullText;
+        }
+        
+        function actualizaMarginalia() {
+            let htmlContentus = '';
+
+            // Sección para análisis morfológico
+            htmlContentus += `
+                <section id="analysis-morphologicus-section" class="mb-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Análisis Morfológico</h3>
+            `;
+            if (activumVerbum) {
+                htmlContentus += `
+                    <h4 class="text-2xl textum-classicum text-gray-800 mb-4">${activumVerbum.terminus}</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <h5 class="font-bold text-sm uppercase text-gray-500 tracking-wider">Análisis</h5>
+                            <p class="text-gray-700 mt-1">${activumVerbum.analysis_morphologicus}</p>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-sm uppercase text-gray-500 tracking-wider">Significado</h5>
+                            <p class="text-gray-700 mt-1"><strong>Español:</strong> ${activumVerbum.significationes.es}</p>
+                        </div>
+                    </div>
+                `;
+            } else {
+                htmlContentus += `<div class="p-4 bg-stone-200 rounded-md text-gray-600"><p>Seleccione una palabra para ver su análisis.</p></div>`;
+            }
+            htmlContentus += `</section>`;
+
+            // Sección para traducción de la oración, solo si hay una oración activa
+            if (activaOratio) {
+                htmlContentus += `
+                    <hr class="border-stone-300 my-6">
+                    <section id="analysis-orationis-section">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Traducción de la Frase</h3>
+                        <div class="space-y-3">
+                             <p class="text-gray-800 textum-classicum bg-stone-200 p-3 rounded-md">${activaOratio.textus_latinus}</p>
+                             <div class="text-gray-700 mt-2">${activaOratio.translationes.es}</div>
+                        </div>
+                    </section>
+                `;
+            }
+            
+            marginaliaContentus.innerHTML = htmlContentus;
+        }
+
+        paragrafusContentus.addEventListener('click', (e) => {
+            const verbumTarget = e.target.closest('.verbum');
+            
+            if (!verbumTarget) {
+                // Si se hace clic fuera de una palabra, limpiar la selección
+                document.querySelectorAll('.activus').forEach(el => el.classList.remove('activus'));
+                activumVerbum = null;
+                activaOratio = null;
+                actualizaMarginalia();
+                return;
+            }
+
+            document.querySelectorAll('.activus').forEach(el => el.classList.remove('activus'));
+
+            const verbumId = verbumTarget.dataset.verbumId;
+            const oratioId = verbumTarget.dataset.oratioId;
+            
+            activaOratio = paragrafus.orationes.find(o => o.id_orationis === oratioId);
+            if (activaOratio) {
+                activumVerbum = activaOratio.verba.find(v => v.id_verbi === verbumId);
+            }
+
+            verbumTarget.classList.add('activus');
+            
+            actualizaMarginalia();
+        });
+
+        // --- Inicialización ---
+        reddeParagrafum();
+        actualizaMarginalia(); // Muestra el estado inicial del panel lateral
+    });
+    </script>
+</body>
+</html>
