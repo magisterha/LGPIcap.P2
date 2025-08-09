@@ -8,7 +8,7 @@
     <style type="text/css">
         /* --- Tailwind CSS Pre-compilado (Preflight & Utilitarios Usados) --- */
         *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::before,::after{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type='button'],[type='reset'],[type='submit']{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type='search']{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button, [role="button"]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}
-        .mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-10{margin-bottom:2.5rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-6{margin-top:1.5rem}.my-6{margin-top:1.5rem;margin-bottom:1.5rem}
+        .mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-10{margin-bottom:2.5rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.my-6{margin-top:1.5rem;margin-bottom:1.5rem}
         .block{display:block}.h-screen{height:100vh}.w-80{width:20rem}
         .overflow-y-auto{overflow-y:auto}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}
         .border-b-2{border-bottom-width:2px}.border-stone-300{--tw-border-opacity:1;border-color:rgb(214 211 209 / var(--tw-border-opacity))}
@@ -105,7 +105,7 @@
     document.addEventListener('DOMContentLoaded', () => {
 
         // =========================================================================================
-        // === INICIO DE LA ZONA DE DATOS ===
+        // === INICIO DE LA ZONA DE DATOS (COMPLETA Y BILINGÜE) ===
         // =========================================================================================
         const paragrafus = {
             id: 1,
@@ -113,10 +113,7 @@
                 {
                     id_orationis: 'o1',
                     textus_latinus: "In Italiā sunt multī pāstōrēs.",
-                    translationes: { 
-                        es: '<strong>Español</strong>: En Italia hay muchos pastores.',
-                        zh: '<strong>中文（繁體）</strong>: 在義大利有很多牧羊人。'
-                    },
+                    translationes: { es: '<strong>Español</strong>: En Italia hay muchos pastores.', zh: '<strong>中文（繁體）</strong>: 在義大利有很多牧羊人。'},
                     verba: [
                         { id_verbi: 'v1_1', terminus: 'In', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo (lugar en donde).', analysis_morphologicus_zh: '詞元: in<br>形態分析: 介詞，與奪格 (地點) 連用。', significationes: { es: 'en', zh: '在...裡面' } },
                         { id_verbi: 'v1_2', terminus: 'Italiā', analysis_morphologicus: 'Lema: Italia, -ae<br>Análisis: Sustantivo, 1ª declinación. Ablativo, singular, femenino.', analysis_morphologicus_zh: '詞元: Italia, -ae<br>形態分析: 名詞，第一變格法。奪格，單數，陰性。', significationes: { es: 'en Italia', zh: '在義大利' } },
@@ -128,10 +125,7 @@
                 {
                     id_orationis: 'o2',
                     textus_latinus: "Quī viā Appiā Rōmā Brundisium it multōs pāstōrēs videt in campīs.",
-                    translationes: { 
-                        es: '<strong>Español</strong>: Quien va de Roma a Brindisi por la Vía Apia, ve a muchos pastores en los campos.',
-                        zh: '<strong>中文（繁體）</strong>: 那個從羅馬經由亞壁古道前往布林迪西的人，在田野裡看見了許多牧羊人。'
-                    },
+                    translationes: { es: '<strong>Español</strong>: Quien va de Roma a Brindisi por la Vía Apia, ve a muchos pastores en los campos.', zh: '<strong>中文（繁體）</strong>: 那個從羅馬經由亞壁古道前往布林迪西的人，在田野裡看見了許多牧羊人。'},
                     verba: [
                         { id_verbi: 'v2_1', terminus: 'Quī', analysis_morphologicus: 'Lema: quī, quae, quod<br>Análisis: Pronombre relativo. Nominativo, singular, masculino.', analysis_morphologicus_zh: '詞元: quī, quae, quod<br>形態分析: 關係代名詞。主格，單數，陽性。', significationes: { es: 'Quien, el que', zh: '那個...的人' } },
                         { id_verbi: 'v2_2', terminus: 'viā Appiā', analysis_morphologicus: 'Lema: via Appia<br>Análisis: Sustantivo + Adjetivo. Ablativo, singular, femenino.', analysis_morphologicus_zh: '詞元: via Appia<br>形態分析: 名詞 + 形容詞。奪格，單數，陰性。', significationes: { es: 'por la Vía Apia', zh: '經由亞壁古道' } },
@@ -147,27 +141,75 @@
                 },
                 {
                     id_orationis: 'o3',
-                    textus_latinus: "Numerus pāstōrum magnus est. Dominī pāstōribus suīs cibum dant. Canēs ā pāstōribus cibum accipiunt. Post campum montēs sunt.",
-                    translationes: { 
-                        es: '<strong>Español</strong>: El número de pastores es grande. Los amos dan comida a sus pastores. Los perros reciben comida de los pastores. Detrás del campo hay montañas.',
-                        zh: '<strong>中文（繁體）</strong>: 牧羊人的數量很多。主人們給他們的牧羊人食物。狗從牧羊人那裡接收食物。田野後面是山。'
-                     },
+                    textus_latinus: "Numerus pāstōrum magnus est.",
+                    translationes: { es: '<strong>Español</strong>: El número de pastores es grande.', zh: '<strong>中文（繁體）</strong>: 牧羊人的數量很多。'},
                     verba: [
                         { id_verbi: 'v3_1', terminus: 'Numerus', analysis_morphologicus: 'Lema: numerus, -ī<br>Análisis: Sustantivo, 2ª declinación. Nominativo, singular, masculino.', analysis_morphologicus_zh: '詞元: numerus, -ī<br>形態分析: 名詞，第二變格法。主格，單數，陽性。', significationes: { es: 'El número', zh: '數量' } },
                         { id_verbi: 'v3_2', terminus: 'pāstōrum', analysis_morphologicus: 'Lema: pāstor, pāstōris<br>Análisis: Sustantivo, 3ª declinación. Genitivo, plural, masculino.', analysis_morphologicus_zh: '詞元: pāstor, pāstōris<br>形態分析: 名詞，第三變格法。屬格，複數，陽性。', significationes: { es: 'de los pastores', zh: '牧羊人的' } },
                         { id_verbi: 'v3_3', terminus: 'magnus', analysis_morphologicus: 'Lema: magnus, -a, -um<br>Análisis: Adjetivo, 1ª/2ª declinación. Nominativo, singular, masculino.', analysis_morphologicus_zh: '詞元: magnus, -a, -um<br>形態分析: 形容詞，第一/第二變格法。主格，單數，陽性。', significationes: { es: 'grande', zh: '大的' } },
-                        { id_verbi: 'v3_4', terminus: 'est', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, singular, presente, indicativo, activo.', analysis_morphologicus_zh: '詞元: sum, esse, fuī<br>形態分析: 不規則動詞。第三人稱，單數，現在時，直陳式，主動語態。', significationes: { es: 'es', zh: '是' } },
-                        { id_verbi: 'v3_5', terminus: 'Dominī', analysis_morphologicus: 'Lema: dominus, -ī<br>Análisis: Sustantivo, 2ª declinación. Nominativo, plural, masculino.', analysis_morphologicus_zh: '詞元: dominus, -ī<br>形態分析: 名詞，第二變格法。主格，複數，陽性。', significationes: { es: 'Los amos', zh: '主人' } },
-                        { id_verbi: 'v3_6', terminus: 'pāstōribus', analysis_morphologicus: 'Lema: pāstor, pāstōris<br>Análisis: Sustantivo, 3ª declinación. Dativo/Ablativo, plural, masculino.', analysis_morphologicus_zh: '詞元: pāstor, pāstōris<br>形態分析: 名詞，第三變格法。與格/奪格，複數，陽性。', significationes: { es: 'a/de los pastores', zh: '給/從牧羊人' } },
-                        { id_verbi: 'v3_7', terminus: 'suīs', analysis_morphologicus: 'Lema: suus, -a, -um<br>Análisis: Adjetivo posesivo. Dativo, plural, masculino.', analysis_morphologicus_zh: '詞元: suus, -a, -um<br>形態分析: 物主形容詞。與格，複數，陽性。', significationes: { es: 'a sus', zh: '他們的' } },
-                        { id_verbi: 'v3_8', terminus: 'cibum', analysis_morphologicus: 'Lema: cibus, -ī<br>Análisis: Sustantivo, 2ª declinación. Acusativo, singular, masculino.', analysis_morphologicus_zh: '詞元: cibus, -ī<br>形態分析: 名詞，第二變格法。賓格，單數，陽性。', significationes: { es: 'comida', zh: '食物' } },
-                        { id_verbi: 'v3_9', terminus: 'dant', analysis_morphologicus: 'Lema: dō, dare, dedī, datum<br>Análisis: Verbo, 1ª conjugación. 3ª persona, plural, presente, indicativo, activo.', analysis_morphologicus_zh: '詞元: dō, dare, dedī, datum<br>形態分析: 動詞，第一變位法。第三人稱，複數，現在時，直陳式，主動語態。', significationes: { es: 'dan', zh: '給予' } },
-                        { id_verbi: 'v3_10', terminus: 'Canēs', analysis_morphologicus: 'Lema: canis, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, masculino/femenino.', analysis_morphologicus_zh: '詞元: canis, -is<br>形態分析: 名詞，第三變格法。主格，複數，陽性/陰性。', significationes: { es: 'Los perros', zh: '狗' } },
-                        { id_verbi: 'v3_11', terminus: 'ā', analysis_morphologicus: 'Lema: ab/ā<br>Análisis: Preposición de ablativo.', analysis_morphologicus_zh: '詞元: ab/ā<br>形態分析: 介詞，與奪格連用。', significationes: { es: 'de, desde, por', zh: '從' } },
-                        { id_verbi: 'v3_12', terminus: 'accipiunt', analysis_morphologicus: 'Lema: accipiō, accipere, accēpī, acceptum<br>Análisis: Verbo, 3ª conjugación -iō. 3ª persona, plural, presente, indicativo, activo.', analysis_morphologicus_zh: '詞元: accipiō, accipere, accēpī, acceptum<br>形態分析: 動詞，第三變位法 -iō。第三人稱，複數，現在時，直陳式，主動語態。', significationes: { es: 'reciben', zh: '接收' } },
-                        { id_verbi: 'v3_13', terminus: 'Post', analysis_morphologicus: 'Lema: post<br>Análisis: Preposición que rige acusativo.', analysis_morphologicus_zh: '詞元: post<br>形態分析: 介詞，與賓格連用。', significationes: { es: 'detrás de', zh: '在...後面' } },
-                        { id_verbi: 'v3_14', terminus: 'campum', analysis_morphologicus: 'Lema: campus, -ī<br>Análisis: Sustantivo, 2ª declinación. Acusativo, singular, masculino.', analysis_morphologicus_zh: '詞元: campus, -ī<br>形態分析: 名詞，第二變格法。賓格，單數，陽性。', significationes: { es: 'el campo', zh: '田野' } },
-                        { id_verbi: 'v3_15', terminus: 'montēs', analysis_morphologicus: 'Lema: mōns, montis<br>Análisis: Sustantivo, 3ª declinación. Nominativo/Acusativo, plural, masculino.', analysis_morphologicus_zh: '詞元: mōns, montis<br>形態分析: 名詞，第三變格法。主格/賓格，複數，陽性。', significationes: { es: 'montañas', zh: '山' } }
+                        { id_verbi: 'v3_4', terminus: 'est', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, singular, presente, indicativo, activo.', analysis_morphologicus_zh: '詞元: sum, esse, fuī<br>形態分析: 不規則動詞。第三人稱，單數，現在時，直陳式，主動語態。', significationes: { es: 'es', zh: '是' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o4',
+                    textus_latinus: "Dominī pāstōribus suīs cibum dant.",
+                    translationes: { es: '<strong>Español</strong>: Los amos dan comida a sus pastores.', zh: '<strong>中文（繁體）</strong>: 主人們給他們的牧羊人食物。'},
+                    verba: [
+                        { id_verbi: 'v4_1', terminus: 'Dominī', analysis_morphologicus: 'Lema: dominus, -ī<br>Análisis: Sustantivo, 2ª declinación. Nominativo, plural, masculino.', analysis_morphologicus_zh: '詞元: dominus, -ī<br>形態分析: 名詞，第二變格法。主格，複數，陽性。', significationes: { es: 'Los amos', zh: '主人' } },
+                        { id_verbi: 'v4_2', terminus: 'pāstōribus', analysis_morphologicus: 'Lema: pāstor, pāstōris<br>Análisis: Sustantivo, 3ª declinación. Dativo, plural, masculino.', analysis_morphologicus_zh: '詞元: pāstor, pāstōris<br>形態分析: 名詞，第三變格法。與格，複數，陽性。', significationes: { es: 'a los pastores', zh: '給牧羊人' } },
+                        { id_verbi: 'v4_3', terminus: 'suīs', analysis_morphologicus: 'Lema: suus, -a, -um<br>Análisis: Adjetivo posesivo. Dativo, plural, masculino.', analysis_morphologicus_zh: '詞元: suus, -a, -um<br>形態分析: 物主形容詞。與格，複數，陽性。', significationes: { es: 'a sus', zh: '他們的' } },
+                        { id_verbi: 'v4_4', terminus: 'cibum', analysis_morphologicus: 'Lema: cibus, -ī<br>Análisis: Sustantivo, 2ª declinación. Acusativo, singular, masculino.', analysis_morphologicus_zh: '詞元: cibus, -ī<br>形態分析: 名詞，第二變格法。賓格，單數，陽性。', significationes: { es: 'comida', zh: '食物' } },
+                        { id_verbi: 'v4_5', terminus: 'dant', analysis_morphologicus: 'Lema: dō, dare, dedī, datum<br>Análisis: Verbo, 1ª conjugación. 3ª persona, plural, presente, indicativo, activo.', analysis_morphologicus_zh: '詞元: dō, dare, dedī, datum<br>形態分析: 動詞，第一變位法。第三人稱，複數，現在時，直陳式，主動語態。', significationes: { es: 'dan', zh: '給予' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o5',
+                    textus_latinus: "Canēs ā pāstōribus cibum accipiunt.",
+                    translationes: { es: '<strong>Español</strong>: Los perros reciben comida de los pastores.', zh: '<strong>中文（繁體）</strong>: 狗從牧羊人那裡接收食物。'},
+                    verba: [
+                        { id_verbi: 'v5_1', terminus: 'Canēs', analysis_morphologicus: 'Lema: canis, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, masculino/femenino.', analysis_morphologicus_zh: '詞元: canis, -is<br>形態分析: 名詞，第三變格法。主格，複數，陽性/陰性。', significationes: { es: 'Los perros', zh: '狗' } },
+                        { id_verbi: 'v5_2', terminus: 'ā', analysis_morphologicus: 'Lema: ab/ā<br>Análisis: Preposición de ablativo.', analysis_morphologicus_zh: '詞元: ab/ā<br>形態分析: 介詞，與奪格連用。', significationes: { es: 'de, desde, por', zh: '從' } },
+                        { id_verbi: 'v5_3', terminus: 'pāstōribus', analysis_morphologicus: 'Lema: pāstor, pāstōris<br>Análisis: Sustantivo, 3ª declinación. Ablativo, plural, masculino.', analysis_morphologicus_zh: '詞元: pāstor, pāstōris<br>形態分析: 名詞，第三變格法。奪格，複數，陽性。', significationes: { es: 'de los pastores', zh: '從牧羊人' } },
+                        { id_verbi: 'v5_4', terminus: 'cibum', analysis_morphologicus: 'Lema: cibus, -ī<br>Análisis: Sustantivo, 2ª declinación. Acusativo, singular, masculino.', analysis_morphologicus_zh: '詞元: cibus, -ī<br>形態分析: 名詞，第二變格法。賓格，單數，陽性。', significationes: { es: 'comida', zh: '食物' } },
+                        { id_verbi: 'v5_5', terminus: 'accipiunt', analysis_morphologicus: 'Lema: accipiō, accipere, accēpī, acceptum<br>Análisis: Verbo, 3ª conjugación -iō. 3ª persona, plural, presente, indicativo, activo.', analysis_morphologicus_zh: '詞元: accipiō, accipere, accēpī, acceptum<br>形態分析: 動詞，第三變位法 -iō。第三人稱，複數，現在時，直陳式，主動語態。', significationes: { es: 'reciben', zh: '接收' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o6',
+                    textus_latinus: "Post campum montēs sunt.",
+                    translationes: { es: '<strong>Español</strong>: Detrás del campo hay montañas.', zh: '<strong>中文（繁體）</strong>: 田野後面是山。'},
+                    verba: [
+                        { id_verbi: 'v6_1', terminus: 'Post', analysis_morphologicus: 'Lema: post<br>Análisis: Preposición que rige acusativo.', analysis_morphologicus_zh: '詞元: post<br>形態分析: 介詞，與賓格連用。', significationes: { es: 'detrás de', zh: '在...後面' } },
+                        { id_verbi: 'v6_2', terminus: 'campum', analysis_morphologicus: 'Lema: campus, -ī<br>Análisis: Sustantivo, 2ª declinación. Acusativo, singular, masculino.', analysis_morphologicus_zh: '詞元: campus, -ī<br>形態分析: 名詞，第二變格法。賓格，單數，陽性。', significationes: { es: 'el campo', zh: '田野' } },
+                        { id_verbi: 'v6_3', terminus: 'montēs', analysis_morphologicus: 'Lema: mōns, montis<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, masculino.', analysis_morphologicus_zh: '詞元: mōns, montis<br>形態分析: 名詞，第三變格法。主格，複數，陽性。', significationes: { es: 'montañas', zh: '山' } },
+                        { id_verbi: 'v6_4', terminus: 'sunt', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, plural, presente, indicativo, activo.', analysis_morphologicus_zh: '詞元: sum, esse, fuī<br>形態分析: 不規則動詞。第三人稱，複數，現在時，直陳式，主動語態。', significationes: { es: 'son/están/hay', zh: '是/在' } }
+                    ]
+                },
+                {
+                    id_orationis: 'o7',
+                    textus_latinus: "Inter montēs sunt vallēs. In campō est collis. (Collis est mōns parvus.) In colle arbor est. In silvā multae arborēs sunt. Ovēs nōn in silvā neque in monte, sed in campō sunt.",
+                    translationes: { es: '<strong>Español</strong>: Entre las montañas hay valles. En el campo hay una colina. (Una colina es una montaña pequeña.) En la colina hay un árbol. En el bosque hay muchos árboles. Las ovejas no están en el bosque ni en la montaña, sino que están en el campo.', zh: '<strong>中文（繁體）</strong>: 山與山之間是山谷。田野裡有一座小丘。(小丘是小山。) 小丘上有一棵樹。森林裡有很多樹。綿羊不在森林裡，也不在山上，而是在田野裡。'},
+                    verba: [
+                        { id_verbi: 'v7_1', terminus: 'Inter', analysis_morphologicus: 'Lema: inter<br>Análisis: Preposición que rige acusativo.', analysis_morphologicus_zh: '詞元: inter<br>形態分析: 介詞，與賓格連用。', significationes: { es: 'entre', zh: '在...之間' } },
+                        { id_verbi: 'v7_2', terminus: 'montēs', analysis_morphologicus: 'Lema: mōns, montis<br>Análisis: Sustantivo, 3ª declinación. Acusativo, plural, masculino.', analysis_morphologicus_zh: '詞元: mōns, montis<br>形態分析: 名詞，第三變格法。賓格，複數，陽性。', significationes: { es: 'las montañas', zh: '山' } },
+                        { id_verbi: 'v7_3', terminus: 'sunt', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, plural, presente, indicativo, activo.', analysis_morphologicus_zh: '詞元: sum, esse, fuī<br>形態分析: 不規則動詞。第三人稱，複數，現在時，直陳式，主動語態。', significationes: { es: 'son/están/hay', zh: '是/在' } },
+                        { id_verbi: 'v7_4', terminus: 'vallēs', analysis_morphologicus: 'Lema: vallēs, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, femenino.', analysis_morphologicus_zh: '詞元: vallēs, -is<br>形態分析: 名詞，第三變格法。主格，複數，陰性。', significationes: { es: 'valles', zh: '山谷' } },
+                        { id_verbi: 'v7_5', terminus: 'In', analysis_morphologicus: 'Lema: in<br>Análisis: Preposición que rige ablativo.', analysis_morphologicus_zh: '詞元: in<br>形態分析: 介詞，與奪格連用。', significationes: { es: 'en', zh: '在' } },
+                        { id_verbi: 'v7_6', terminus: 'campō', analysis_morphologicus: 'Lema: campus, -ī<br>Análisis: Sustantivo, 2ª declinación. Ablativo, singular, masculino.', analysis_morphologicus_zh: '詞元: campus, -ī<br>形態分析: 名詞，第二變格法。奪格，單數，陽性。', significationes: { es: 'en el campo', zh: '在田野裡' } },
+                        { id_verbi: 'v7_7', terminus: 'est', analysis_morphologicus: 'Lema: sum, esse, fuī<br>Análisis: Verbo irregular. 3ª persona, singular, presente, indicativo, activo.', analysis_morphologicus_zh: '詞元: sum, esse, fuī<br>形態分析: 不規則動詞。第三人稱，單數，現在時，直陳式，主動語態。', significationes: { es: 'es/está/hay', zh: '是/在' } },
+                        { id_verbi: 'v7_8', terminus: 'collis', analysis_morphologicus: 'Lema: collis, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo, singular, masculino.', analysis_morphologicus_zh: '詞元: collis, -is<br>形態分析: 名詞，第三變格法。主格，單數，陽性。', significationes: { es: 'una colina', zh: '小丘' } },
+                        { id_verbi: 'v7_9', terminus: 'mōns', analysis_morphologicus: 'Lema: mōns, montis<br>Análisis: Sustantivo, 3ª declinación. Nominativo, singular, masculino.', analysis_morphologicus_zh: '詞元: mōns, montis<br>形態分析: 名詞，第三變格法。主格，單數，陽性。', significationes: { es: 'una montaña', zh: '山' } },
+                        { id_verbi: 'v7_10', terminus: 'parvus', analysis_morphologicus: 'Lema: parvus, -a, -um<br>Análisis: Adjetivo. Nominativo, singular, masculino.', analysis_morphologicus_zh: '詞元: parvus, -a, -um<br>形態分析: 形容詞。主格，單數，陽性。', significationes: { es: 'pequeño', zh: '小的' } },
+                        { id_verbi: 'v7_11', terminus: 'colle', analysis_morphologicus: 'Lema: collis, -is<br>Análisis: Sustantivo, 3ª declinación. Ablativo, singular, masculino.', analysis_morphologicus_zh: '詞元: collis, -is<br>形態分析: 名詞，第三變格法。奪格，單數，陽性。', significationes: { es: 'en la colina', zh: '在小丘上' } },
+                        { id_verbi: 'v7_12', terminus: 'arbor', analysis_morphologicus: 'Lema: arbor, -oris<br>Análisis: Sustantivo, 3ª declinación. Nominativo, singular, femenino.', analysis_morphologicus_zh: '詞元: arbor, -oris<br>形態分析: 名詞，第三變格法。主格，單數，陰性。', significationes: { es: 'un árbol', zh: '樹' } },
+                        { id_verbi: 'v7_13', terminus: 'silvā', analysis_morphologicus: 'Lema: silva, -ae<br>Análisis: Sustantivo, 1ª declinación. Ablativo, singular, femenino.', analysis_morphologicus_zh: '詞元: silva, -ae<br>形態分析: 名詞，第一變格法。奪格，單數，陰性。', significationes: { es: 'en el bosque', zh: '在森林裡' } },
+                        { id_verbi: 'v7_14', terminus: 'multae', analysis_morphologicus: 'Lema: multus, -a, -um<br>Análisis: Adjetivo. Nominativo, plural, femenino.', analysis_morphologicus_zh: '詞元: multus, -a, -um<br>形態分析: 形容詞。主格，複數，陰性。', significationes: { es: 'muchas', zh: '許多的' } },
+                        { id_verbi: 'v7_15', terminus: 'arborēs', analysis_morphologicus: 'Lema: arbor, -oris<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, femenino.', analysis_morphologicus_zh: '詞元: arbor, -oris<br>形態分析: 名詞，第三變格法。主格，複數，陰性。', significationes: { es: 'árboles', zh: '樹' } },
+                        { id_verbi: 'v7_16', terminus: 'Ovēs', analysis_morphologicus: 'Lema: ovis, -is<br>Análisis: Sustantivo, 3ª declinación. Nominativo, plural, femenino.', analysis_morphologicus_zh: '詞元: ovis, -is<br>形態分析: 名詞，第三變格法。主格，複數，陰性。', significationes: { es: 'Las ovejas', zh: '綿羊' } },
+                        { id_verbi: 'v7_17', terminus: 'nōn', analysis_morphologicus: 'Lema: nōn<br>Análisis: Adverbio de negación.', analysis_morphologicus_zh: '詞元: nōn<br>形態分析: 副詞，表否定。', significationes: { es: 'no', zh: '不' } },
+                        { id_verbi: 'v7_18', terminus: 'neque', analysis_morphologicus: 'Lema: neque<br>Análisis: Conjunción coordinante negativa.', analysis_morphologicus_zh: '詞元: neque<br>形態分析: 並列連接詞，表否定。', significationes: { es: 'ni', zh: '也不' } },
+                        { id_verbi: 'v7_19', terminus: 'monte', analysis_morphologicus: 'Lema: mōns, montis<br>Análisis: Sustantivo, 3ª declinación. Ablativo, singular, masculino.', analysis_morphologicus_zh: '詞元: mōns, montis<br>形態分析: 名詞，第三變格法。奪格，單數，陽性。', significationes: { es: 'en la montaña', zh: '在山上' } },
+                        { id_verbi: 'v7_20', terminus: 'sed', analysis_morphologicus: 'Lema: sed<br>Análisis: Conjunción coordinante adversativa.', analysis_morphologicus_zh: '詞元: sed<br>形態分析: 並列連接詞，表轉折。', significationes: { es: 'sino, pero', zh: '而是，但是' } }
                     ]
                 },
                 // ... (El resto de las oraciones seguirían este formato) ...
